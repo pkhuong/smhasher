@@ -4,3 +4,9 @@
 [submodule "mx3"]
 	path = mx3
 	url = https://github.com/jonmaiga/mx3
+[submodule "crcutil"]
+	path = crcutil
+	url = https://github.com/rurban/crcutil.git
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/cloudflare/zlib.git
