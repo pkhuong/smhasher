@@ -1261,6 +1261,13 @@ void test ( hashfunc<hashtype> hash, HashInfo* info )
         result &= PerlinNoise<hashtype>( hash,16, testCollision, testDistribution, g_drawDiagram );
     }
 
+    printf("Testing BitFreq Normalcy for various seeds\n");
+    for (uint32_t seed = 0; seed < 1<<31; seed += 8) {
+      result &= BitFreqTest<hashtype>( hash, seed, g_drawDiagram );
+      if (!result)
+        break;
+    }
+
     if(!result) printf("*********FAIL*********\n");
     printf("\n");
     fflush(NULL);
